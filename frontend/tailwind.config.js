@@ -7,141 +7,77 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
-        black: '#14181B',
+        black: '#000000',
+        white: '#141922', // superficies elevadas (cards/modales)
 
-        // Neutral — "paper / ink" en vez de gris frío genérico
+        // Shell oscuro — invertido (50 = fondo de página, 900 = texto principal)
         gray: {
-          50: '#FAFAF8',
-          100: '#F1F1EC',
-          200: '#E3E3DE',
-          300: '#CFCFC8',
-          400: '#A8A8A0',
-          500: '#83837A',
-          600: '#5B6169',
-          700: '#43474D',
-          800: '#2B2E33',
-          900: '#14181B',
+          50: '#0A0D12', 100: '#10141B', 200: '#1B2029', 300: '#262C38',
+          400: '#4A5262', 500: '#7A8496', 600: '#9AA3B5', 700: '#BAC1D0',
+          800: '#D8DCE6', 900: '#F4F6FA',
         },
 
-        // Productos / acciones primarias — pino-teal
-        blue: {
-          50: '#EAF3F1',
-          100: '#D3E7E2',
-          200: '#A8D0C6',
-          300: '#7CB8A9',
-          400: '#4B9683',
-          500: '#2C7C68',
-          600: '#1F6F5C',
-          700: '#195A4B',
-          800: '#163F35',
-          900: '#0F2C25',
+        // Acentos — orden normal de Tailwind (50 claro -> 900 oscuro),
+        // anclados en un tono 600 vívido/neón por módulo
+        blue: {   // Productos
+          50: '#F1F8FE', 100: '#E3F1FC', 200: '#C9E3F9', 300: '#A8D2F5',
+          400: '#7FBBEF', 500: '#57A6EA', 600: '#2F8FE0', 700: '#2570B3',
+          800: '#184F80', 900: '#0F3355',
+        },
+        purple: { // Categorías
+          50: '#F8F3FE', 100: '#F1E7FD', 200: '#E4D0FB', 300: '#D3B0F9',
+          400: '#C08FF6', 500: '#AD6EF3', 600: '#9A4EF0', 700: '#7A3AC2',
+          800: '#5C2B94', 900: '#401D66',
+        },
+        indigo: { // Usuarios
+          50: '#F4F5FF', 100: '#E9ECFE', 200: '#D5DAFC', 300: '#BAC3FA',
+          400: '#9BA7F7', 500: '#7C8CF5', 600: '#6577F2', 700: '#4E5FC9',
+          800: '#3A4699', 900: '#272F6B',
+        },
+        green: {  // Ventas / éxito
+          50: '#F1FCF7', 100: '#E0F8EC', 200: '#C2EFD9', 300: '#99E2C1',
+          400: '#6BD4AA', 500: '#3FC593', 600: '#22B37D', 700: '#1B8F63',
+          800: '#146B4A', 900: '#0D4A33',
+        },
+        red: {    // Peligro
+          50: '#FEF4F5', 100: '#FCE8EA', 200: '#FAD5D8', 300: '#F5B3B9',
+          400: '#F08D96', 500: '#E96774', 600: '#E14352', 700: '#B93340',
+          800: '#90252F', 900: '#691A21',
+        },
+        yellow: { // Advertencia
+          50: '#FEFAF3', 100: '#FCF2E2', 200: '#F9E5C7', 300: '#F4D3A1',
+          400: '#EEBE74', 500: '#E7A947', 600: '#E0961A', 700: '#B87814',
+          800: '#8F5C0F', 900: '#67420A',
+        },
+        orange: { // Usado en el modal de detalle de venta (Total)
+          50: '#FEF6F3', 100: '#FCE9E2', 200: '#F9D4C7', 300: '#F4B9A1',
+          400: '#EE9E74', 500: '#E78347', 600: '#E06B1A', 700: '#B85614',
+          800: '#8F420F', 900: '#672F0A',
         },
 
-        // Categorías — ciruela
-        purple: {
-          50: '#F3EEF2',
-          100: '#E4D6E2',
-          200: '#C9ADC6',
-          300: '#AD84A9',
-          400: '#92618D',
-          500: '#7A4A75',
-          600: '#653B61',
-          700: '#4F2E4C',
-          800: '#3A2237',
-          900: '#271724',
-        },
-
-        // Usuarios — índigo grisáceo
-        indigo: {
-          50: '#EEF0F4',
-          100: '#D9DEE8',
-          200: '#B3BDD1',
-          300: '#8D9CBA',
-          400: '#6C7CA0',
-          500: '#556289',
-          600: '#445071',
-          700: '#343E59',
-          800: '#252C40',
-          900: '#171B28',
-        },
-
-        // Ventas / éxito — musgo
-        green: {
-          50: '#EEF3EA',
-          100: '#D9E6D0',
-          200: '#B3CDA1',
-          300: '#8CB373',
-          400: '#6C9A52',
-          500: '#57813F',
-          600: '#476B34',
-          700: '#38542A',
-          800: '#293D1F',
-          900: '#1B2814',
-        },
-
-        // Peligro — barro/ladrillo
-        red: {
-          50: '#FBEEEA',
-          100: '#F3D6CB',
-          200: '#E4AC97',
-          300: '#D48263',
-          400: '#C15F3D',
-          500: '#B3452C',
-          600: '#963823',
-          700: '#782C1B',
-          800: '#582012',
-          900: '#3D160C',
-        },
-
-        // Advertencia — mostaza
-        yellow: {
-          50: '#FAF4E7',
-          100: '#F2E3C1',
-          200: '#E3C784',
-          300: '#D3AA4D',
-          400: '#C0912E',
-          500: '#A6741C',
-          600: '#8A5F16',
-          700: '#6B4A11',
-          800: '#4C350C',
-          900: '#322308',
-        },
-
-        'primary-50': '#EAF3F1',
-        'primary-100': '#D3E7E2',
-        'primary-200': '#A8D0C6',
-        'primary-300': '#7CB8A9',
-        'primary-400': '#4B9683',
-        'primary-500': '#2C7C68',
-        'primary-600': '#1F6F5C',
-        'primary-700': '#195A4B',
-        'primary-800': '#163F35',
-        'primary-900': '#0F2C25',
-        'farmacia-green': '#476B34',
-        'farmacia-red': '#B3452C',
-        'farmacia-yellow': '#A6741C',
+        'primary-50': '#F1F8FE', 'primary-100': '#E3F1FC', 'primary-200': '#C9E3F9',
+        'primary-300': '#A8D2F5', 'primary-400': '#7FBBEF', 'primary-500': '#57A6EA',
+        'primary-600': '#2F8FE0', 'primary-700': '#2570B3', 'primary-800': '#184F80',
+        'primary-900': '#0F3355',
+        'farmacia-green': '#22B37D',
+        'farmacia-red': '#E14352',
+        'farmacia-yellow': '#E0961A',
       },
 
-      // Radios más contenidos y precisos (menos "burbuja")
       borderRadius: {
-        md: '0.375rem',
-        lg: '0.5rem',
-        xl: '0.625rem',
-        '2xl': '0.875rem',
-        '3xl': '1.1rem',
+        md: '0.375rem', lg: '0.5rem', xl: '0.625rem', '2xl': '0.875rem', '3xl': '1.1rem',
       },
 
-      // Sombras planas y sutiles en vez de difusas
       boxShadow: {
-        sm: '0 1px 2px 0 rgba(20,24,27,0.05)',
-        DEFAULT: '0 1px 3px 0 rgba(20,24,27,0.07), 0 1px 2px -1px rgba(20,24,27,0.05)',
-        md: '0 1px 3px 0 rgba(20,24,27,0.06), 0 1px 2px -1px rgba(20,24,27,0.04)',
-        lg: '0 2px 6px -1px rgba(20,24,27,0.08), 0 1px 3px -1px rgba(20,24,27,0.05)',
-        xl: '0 4px 10px -2px rgba(20,24,27,0.10), 0 2px 4px -2px rgba(20,24,27,0.06)',
-        '2xl': '0 8px 20px -4px rgba(20,24,27,0.14)',
+        sm: '0 1px 2px 0 rgba(0,0,0,0.4)',
+        DEFAULT: '0 1px 3px 0 rgba(0,0,0,0.45), 0 1px 2px -1px rgba(0,0,0,0.3)',
+        md: '0 2px 8px 0 rgba(0,0,0,0.45), 0 1px 2px -1px rgba(0,0,0,0.3)',
+        lg: '0 4px 16px -2px rgba(0,0,0,0.5), 0 2px 6px -2px rgba(0,0,0,0.3)',
+        xl: '0 8px 28px -4px rgba(0,0,0,0.55), 0 4px 10px -4px rgba(0,0,0,0.35)',
+        '2xl': '0 16px 48px -8px rgba(0,0,0,0.65)',
       },
     },
   },
