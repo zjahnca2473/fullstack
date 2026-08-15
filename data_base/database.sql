@@ -1,11 +1,5 @@
 -- Script para PostgreSQL
--- Crea la base de datos manualmente y conéctate a ella antes de ejecutar este archivo.
--- Ejemplo:
-
-CREATE DATABASE IF NOT EXISTS farmacia_db;
-
--- Seleccionar Base de datos
-\c farmacia_db;
+-- Ejecutar directamente contra la base de datos ya conectada (no crea ni cambia de base).
 
 -- Tipo ENUM para roles
 DO $$
