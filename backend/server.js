@@ -45,7 +45,13 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
   ...envOrigins,
+
 ];
+
+// --- DEBUG TEMPORAL: quitar esta línea después de diagnosticar ---
+console.log('DEBUG allowedOrigins:', JSON.stringify(allowedOrigins));
+console.log('DEBUG NODE_ENV:', JSON.stringify(NODE_ENV));
+// -------------------------------------------------------------
 
 app.use(
   cors({
